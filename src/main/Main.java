@@ -15,8 +15,29 @@ public class Main {
                 "Press 3 to search for a contact\n" +
                 "Press 4 to delete a contact\n" +
                 "Press 5 to exit program");
+        while (flag) {
+            int n = sc.nextInt();
 
-
-
+            switch (n) {
+                case 1:
+                    obj.add();
+                    break;
+                case 2:
+                    obj.view();
+                    break;
+                case 3:
+                    //Object firstName;
+                    obj.search();
+                    break;
+                case 4:
+                    obj.remove();
+                    break;
+                case 5:
+                    System.exit(0);
+                    flag = false;
+                    break;
+            }
+        }
     }
 }
+
