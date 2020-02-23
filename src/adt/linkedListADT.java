@@ -4,4 +4,7 @@ public interface linkedListADT<E> {
     void add(E data);
 
     void remove(E data);
+
+    E search(String firstName);
+
 }
