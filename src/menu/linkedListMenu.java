@@ -74,6 +74,16 @@ public class linkedListMenu<E> implements linkedListADT<E> {
     @Override
     public void remove() {
 
+        System.out.println("Here are all your contacts:");
+        int i = 1;
+        while (true) {
+            Node<Person> node = myLinkedList.getObject();
+            if (node == null)
+                break;
+            System.out.println(i + ". " + node.getData().getFirstName() + " " + node.getData().getLastName());
+            i++;
+        }
+
     }
 
     @Override
