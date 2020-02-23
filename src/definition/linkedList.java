@@ -33,7 +33,12 @@ public class linkedList<T extends Comparable<T>> {
             }
             temp.setNext(node);
         }
+
     }
 
+    //Helper method to check if linked list is empty or not
+    public boolean isEmpty() {
+        return head == null;
+    }
 }
 
