@@ -2,7 +2,7 @@ package node;
 
 public class Node<T> {
     private T data;   //  Data of node
-    private Node<T> next;  //self referential data
+    private Node<T> iterator;  //self referential data
 
     public T getData() {
         return data;
@@ -12,12 +12,12 @@ public class Node<T> {
         this.data = data;
     }
 
-    public Node<T> getNext() {
-        return next;
+    public Node<T> getIterator() {
+        return iterator;
     }
 
-    public void setNext(Node<T> next) {
-        this.next = next;
+    public void setNext(Node<T> iterator) {
+        this.iterator = iterator;
     }
 
     @Override
