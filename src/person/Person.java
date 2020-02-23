@@ -1,4 +1,8 @@
 package person;
 
-public class Person {
+public class Person implements Comparable<Person> {
+    @Override
+    public int compareTo(Person o) {
+        return 0;
+    }
 }
