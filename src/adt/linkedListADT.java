@@ -1,4 +1,6 @@
 package adt;
 
-public interface linkedListADT {
+public interface linkedListADT<E> {
+    void add(E data);
+
 }
