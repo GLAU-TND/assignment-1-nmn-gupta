@@ -1,12 +1,12 @@
 package adt;
 
 public interface linkedListADT<E> {
-    void add(E data);
+    public void add();
 
-    void remove(E data);
+    public void remove();
 
-    E search(String firstName);
+    public E search();
 
-    void view();
+    public void view();
 
 }
