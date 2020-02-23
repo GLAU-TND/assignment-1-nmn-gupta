@@ -117,9 +117,14 @@ public class linkedListMenu<E> implements linkedListADT<E> {
 
     }
 
+    // Helper method to sort the contact list.
+    private void sortList(linkedList<Person> linkedList) {
+        myLinkedList.sort();
+    }
 
     @Override
     public void view() {
+
 
     }
 }
