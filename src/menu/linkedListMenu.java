@@ -2,6 +2,7 @@ package menu;
 
 import adt.linkedListADT;
 import definition.linkedList;
+import node.Node;
 import person.Person;
 
 import java.util.Scanner;
@@ -63,6 +64,9 @@ public class linkedListMenu<E> implements linkedListADT<E> {
             //System.out.println("n");
         }
         System.out.println("contact is saved in the list!!");
+        Node<Person> node = new Node<>();
+        node.setData(person);
+        myLinkedList.insert(node);
 
     }
 
