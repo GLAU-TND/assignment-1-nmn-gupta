@@ -54,7 +54,7 @@ public class Person implements Comparable<Person> {
     //toString method to show all phone numbers of person
     @Override
     public String toString() {
-        if (this.getEmailID() != "")
+        if (!this.getEmailID().equals(""))
             return "-------- * -------- * -------- * --------\n" +
                     "First Name: " + this.getFirstName() + "\n" +
                     "Last Name: " + this.getLastName() + "\n" +
