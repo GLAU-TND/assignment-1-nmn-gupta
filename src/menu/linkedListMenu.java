@@ -107,6 +107,13 @@ public class linkedListMenu<E> implements linkedListADT<E> {
         }
 
         System.out.println(counter + " match found!");
+        while (true) {
+            Node<Person> node = myLinkedList.getObject();
+            if (node == null)
+                break;
+            if (node.getData().getFirstName().compareTo(name) == 0)
+                System.out.println(node.getData());
+        }
 
     }
 
