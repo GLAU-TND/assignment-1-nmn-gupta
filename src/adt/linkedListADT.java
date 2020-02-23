@@ -5,7 +5,7 @@ public interface linkedListADT<E> {
 
     public void remove();
 
-    public E search();
+    public void search();
 
     public void view();
 

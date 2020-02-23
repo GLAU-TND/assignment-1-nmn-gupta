@@ -92,9 +92,24 @@ public class linkedListMenu<E> implements linkedListADT<E> {
     }
 
     @Override
-    public E search() {
-        return null;
+    public void search() {
+        int counter = 0;
+        System.out.print("You could search for a contact from their first names: ");
+        sc.nextLine();
+        String name = sc.nextLine().trim();
+
+        while (true) {
+            Node<Person> node = myLinkedList.getObject();
+            if (node == null)
+                break;
+            if (node.getData().getFirstName().compareTo(name) == 0)
+                counter++;
+        }
+
+        System.out.println(counter + " match found!");
+
     }
+
 
     @Override
     public void view() {
