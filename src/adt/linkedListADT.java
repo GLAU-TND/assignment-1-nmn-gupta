@@ -7,4 +7,6 @@ public interface linkedListADT<E> {
 
     E search(String firstName);
 
+    void view();
+
 }
