@@ -4,7 +4,7 @@ import node.Node;
 
 public class linkedList<T extends Comparable<T>> {
     private Node<T> head;           //It is the beginning of linked list
-    private Node<T> iter;           //It is used to iterate the list
+    private Node<T> next;           //It is used to iterate the list
 
     public Node<T> getHead() {
         return head;
@@ -12,15 +12,15 @@ public class linkedList<T extends Comparable<T>> {
 
     public void setHead(Node<T> node) {
         head = node;
-        iter = head;
+        next = head;
     }
 
     public Node<T> getIter() {
-        return iter;
+        return next;
     }
 
     public void setIter(Node<T> iter) {
-        this.iter = iter;
+        this.next = iter;
     }
 
     public void insert(Node<T> node) {
@@ -92,9 +92,10 @@ public class linkedList<T extends Comparable<T>> {
 
     public void sort() {
         Node<T> pass1 = getHead();
-        Node<T> pass2 = getHead().getNext();
+
 
         while (pass1 != null) {
+            Node<T> pass2 = getHead();
             while (pass2 != null) {
                 if (pass1.getData().compareTo(pass2.getData()) > 0) {
                     T temp = pass1.getData();

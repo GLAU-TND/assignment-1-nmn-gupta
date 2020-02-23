@@ -18,7 +18,7 @@ public class linkedListMenu<E> implements linkedListADT<E> {
 
     @Override
     public void add() {
-
+        sc.nextLine();
         Person person = new Person();
         String name;
         System.out.println("You have chosen to add a new contact: \n" +
@@ -95,6 +95,7 @@ public class linkedListMenu<E> implements linkedListADT<E> {
     public void search() {
         int counter = 0;
         System.out.print("You could search for a contact from their first names: ");
+        //sc.nextLine();
         String name = sc.nextLine().trim();
 
         while (true) {
@@ -124,6 +125,8 @@ public class linkedListMenu<E> implements linkedListADT<E> {
     @Override
     public void view() {
         sortList(myLinkedList);
+        System.out.println("---Here are all your contacts---");
+
         while (true) {
             Node<Person> node = myLinkedList.getObject();
             if (node == null)
