@@ -95,7 +95,6 @@ public class linkedListMenu<E> implements linkedListADT<E> {
     public void search() {
         int counter = 0;
         System.out.print("You could search for a contact from their first names: ");
-        sc.nextLine();
         String name = sc.nextLine().trim();
 
         while (true) {
