@@ -10,8 +10,9 @@ public class linkedList<T extends Comparable<T>> {
         return head;
     }
 
-    public void setHead(Node<T> head) {
-        this.head = head;
+    public void setHead(Node<T> node) {
+        head = node;
+        iter = head;
     }
 
     public Node<T> getIter() {
@@ -21,5 +22,18 @@ public class linkedList<T extends Comparable<T>> {
     public void setIter(Node<T> iter) {
         this.iter = iter;
     }
+
+    public void insert(Node<T> node) {
+        if (getHead() == null) {
+            setHead(node);
+        } else {
+            Node<T> temp = head;
+            while (temp.getNext() != null) {
+                temp = temp.getNext();
+            }
+            temp.setNext(node);
+        }
+    }
+
 }
 
