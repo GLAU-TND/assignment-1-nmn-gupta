@@ -14,9 +14,23 @@ public class Person implements Comparable<Person> {
 
     //Setter for first name
     public void setFirstName(String firstName) {
-        //System.out.println(firstName);
         this.firstName = firstName;
     }
+
+    //Getter for last name
+    public String getLastName() {
+        return lastName;
+    }
+
+    //Setter for last name
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+
+
+
+
     @Override
     public int compareTo(Person o) {
         return 0;
