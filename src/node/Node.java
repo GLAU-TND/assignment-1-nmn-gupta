@@ -1,4 +1,4 @@
 package node;
 
-public class Node {
+public class Node<T> {
 }
