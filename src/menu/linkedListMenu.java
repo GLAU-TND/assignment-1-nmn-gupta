@@ -83,6 +83,11 @@ public class linkedListMenu<E> implements linkedListADT<E> {
             System.out.println(i + ". " + node.getData().getFirstName() + " " + node.getData().getLastName());
             i++;
         }
+        System.out.print("Press the number against the contact to delete it: ");
+        int position = sc.nextInt();
+        Person person = myLinkedList.deleteFromPosition(position).getData();
+
+        System.out.println(person.getFirstName() + " " + person.getLastName() + "'s contact deleted from list!");
 
     }
 
