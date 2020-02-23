@@ -124,7 +124,14 @@ public class linkedListMenu<E> implements linkedListADT<E> {
 
     @Override
     public void view() {
-
-
+        sortList(myLinkedList);
+        while (true) {
+            Node<Person> node = myLinkedList.getObject();
+            if (node == null)
+                break;
+            System.out.println(node.getData());
+        }
     }
+
+
 }
