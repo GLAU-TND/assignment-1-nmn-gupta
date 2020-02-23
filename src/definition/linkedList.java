@@ -58,5 +58,16 @@ public class linkedList<T extends Comparable<T>> {
         return temp;
     }
 
+    //method to delete node from beginning
+    public Node<T> delete() {
+        if (isEmpty()) {
+            System.out.println("Underflow");
+            return null;
+        }
+        Node<T> temp = getHead();
+        setHead(getHead().getNext());
+        return temp;
+    }
+
 }
 
