@@ -8,5 +8,4 @@ public interface linkedListADT<E> {
     public void search();
 
     public void view();
-
 }
