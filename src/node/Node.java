@@ -25,5 +25,6 @@ public class Node<T> {
         return "Node{" +
                 "data=" + data +
                 '}';
+
     }
 }
