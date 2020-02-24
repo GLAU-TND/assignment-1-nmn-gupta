@@ -18,7 +18,7 @@ public class linkedListMenu<E> implements linkedListADT<E> {
 
     @Override
     public void add() {
-        sc.nextLine();
+        // sc.nextLine();
         Person person = new Person();
         String name;
         System.out.println("You have chosen to add a new contact: \n" +
@@ -124,7 +124,8 @@ public class linkedListMenu<E> implements linkedListADT<E> {
 
     @Override
     public void view() {
-        sortList(myLinkedList);
+        myLinkedList.sort();
+
         System.out.println("---Here are all your contacts---");
 
         while (true) {

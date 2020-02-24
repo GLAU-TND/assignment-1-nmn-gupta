@@ -15,12 +15,12 @@ public class linkedList<T extends Comparable<T>> {
         next = head;
     }
 
-    public Node<T> getIter() {
+    public Node<T> getNext() {
         return next;
     }
 
-    public void setIter(Node<T> iter) {
-        this.next = iter;
+    public void setNext(Node<T> next) {
+        this.next = next;
     }
 
     public void insert(Node<T> node) {
@@ -28,8 +28,8 @@ public class linkedList<T extends Comparable<T>> {
             setHead(node);
         } else {
             Node<T> temp = head;
-            while (temp.getNext() != null) {
-                temp = temp.getNext();
+            while (temp.getIterator() != null) {
+                temp = temp.getIterator();
             }
             temp.setNext(node);
         }
@@ -46,15 +46,15 @@ public class linkedList<T extends Comparable<T>> {
 
         Node<T> temp;
 
-        if (getIter() == null && getHead() == null) {
+        if (getNext() == null && getHead() == null) {
             System.out.println("List is empty");
             return null;
-        } else if (getIter() == null) {
-            setIter(getHead());
+        } else if (getNext() == null) {
+            setNext(getHead());
             return null;
         }
-        temp = getIter();
-        setIter(getIter().getNext());
+        temp = getNext();
+        setNext(getNext().getIterator());
         return temp;
     }
 
@@ -65,7 +65,7 @@ public class linkedList<T extends Comparable<T>> {
             return null;
         }
         Node<T> temp = getHead();
-        setHead(getHead().getNext());
+        setHead(getHead().getIterator());
         return temp;
     }
 
@@ -82,10 +82,10 @@ public class linkedList<T extends Comparable<T>> {
             setHead(null);
         } else {
             for (int j = 1; j < i - 1; j++) {
-                temp = temp.getNext();
+                temp = temp.getIterator();
             }
-            deletedNode = temp.getNext();
-            temp.setNext(temp.getNext().getNext());
+            deletedNode = temp.getIterator();
+            temp.setNext(temp.getIterator().getIterator());
         }
         return deletedNode;
     }
@@ -96,15 +96,17 @@ public class linkedList<T extends Comparable<T>> {
 
         while (pass1 != null) {
             Node<T> pass2 = getHead();
+
+
             while (pass2 != null) {
-                if (pass1.getData().compareTo(pass2.getData()) > 0) {
+                if (pass1.getData().compareTo(pass2.getData()) < 0) {
                     T temp = pass1.getData();
                     pass1.setData(pass2.getData());
                     pass2.setData(temp);
                 }
-                pass2 = pass2.getNext();
+                pass2 = pass2.getIterator();
             }
-            pass1 = pass1.getNext();
+            pass1 = pass1.getIterator();
         }
     }
 
