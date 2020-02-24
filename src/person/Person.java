@@ -54,20 +54,37 @@ public class Person implements Comparable<Person> {
     //toString method to show all phone numbers of person
     @Override
     public String toString() {
-        if (!this.getEmailID().equals(""))
+        if (!this.getEmailID().equals("") && phoneNumbers.length() == 10)
+            return "-------- * -------- * -------- * --------\n" +
+                    "First Name: " + this.getFirstName() + "\n" +
+                    "Last Name: " + this.getLastName() + "\n" +
+                    "Contact Number: " + getPhoneNumber() + "\n" +
+                    "Email address: " + this.getEmailID() + "\n" +
+                    "-------- * -------- * -------- * --------";
+        if (!this.getEmailID().equals("") && phoneNumbers.length() > 10)
             return "-------- * -------- * -------- * --------\n" +
                     "First Name: " + this.getFirstName() + "\n" +
                     "Last Name: " + this.getLastName() + "\n" +
                     "Contact Number(s): " + getPhoneNumber() + "\n" +
                     "Email address: " + this.getEmailID() + "\n" +
                     "-------- * -------- * -------- * --------";
-        else
+        if (this.getEmailID().equals("") && phoneNumbers.length() > 10)
 
             return "-------- * -------- * -------- * --------\n" +
                     "First Name: " + this.getFirstName() + "\n" +
                     "Last Name: " + this.getLastName() + "\n" +
                     "Contact Number(s): " + getPhoneNumber() + "\n" +
                     "-------- * -------- * -------- * --------";
+        if (this.getEmailID().equals("") && phoneNumbers.length() == 10)
+
+            return "-------- * -------- * -------- * --------\n" +
+                    "First Name: " + this.getFirstName() + "\n" +
+                    "Last Name: " + this.getLastName() + "\n" +
+                    "Contact Number: " + getPhoneNumber() + "\n" +
+                    "-------- * -------- * -------- * --------";
+        else
+            return null;
+
     }
 
     //compareTo method for comparing objects of person class
